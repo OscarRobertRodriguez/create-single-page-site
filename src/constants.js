@@ -38,6 +38,8 @@ html {
   --text-black: hsl(0, 0%, 0%);
   --white: hsl(0, 0%, 100%); 
   --red: hsl(0, 93%, 64%); 
+  --red-hover: hsla(0, 100%, 79%, 1);
+  --black-hover: hsla(240, 12%, 30%, 1);
     
   --font : 'Commisioner', sans-serif; 
   --extra-bold: 800; 

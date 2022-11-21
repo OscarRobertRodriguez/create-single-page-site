@@ -1,10 +1,13 @@
 import GlobalStyles from "../../constants";
 import styled from "styled-components";
+import Button from "../Button/Button";
+import UnderlineButton from "../UnderlineButton/UnderlineButton";
 
 function App() {
   return (
     <Wrapper>
-     <h1>Hello</h1>
+    <Button hover={`var(--red-hover)`} bgColor={`var(--red)`}>Hello</Button>
+     <UnderlineButton>l</UnderlineButton>
      <GlobalStyles />
     </Wrapper>
   );
@@ -17,6 +20,6 @@ const Wrapper = styled.div`
  min-height: 100%;
  width: 100%;
  max-width: 1440px;
- background-color: red;
  margin: 0 auto;
+
 `; 
