@@ -31,7 +31,8 @@ html {
   --28px: 1.75rem; 
   --32px: 2rem;
   --40px: 2.5rem;
-  --56px: 3.5rem; 
+  --56px: 3.5rem;
+  --80px: 5rem;
   --88px: 5.5rem; 
 
   --bg-black: hsl(240, 14%, 11%); 
@@ -41,7 +42,7 @@ html {
   --red-hover: hsla(0, 100%, 79%, 1);
   --black-hover: hsla(240, 12%, 30%, 1);
     
-  --font : 'Commisioner', sans-serif; 
+  --font : 'Commissioner', sans-serif; 
   --extra-bold: 800; 
 }
 
@@ -100,7 +101,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 
-h1, h2 , h3 {
+h1, h2 , h3, h4 {
   font-weight: var(--extra-bold);
 }
 
@@ -138,6 +139,19 @@ h3 {
     line-height: 32px;
     }
  
+}
+
+h4 {
+    text-transform: capitalize;
+    font-size: var(--15px);
+    color: var(--white);
+
+
+    @media ${QUERIES.desktopAndUp} {
+        font-size: var(--20px);
+    }
+   
+
 }
 
 p {
