@@ -22,7 +22,7 @@ function Button({width, height, bgColor, hover, fs, children}) {
 
 const Wrapper = styled.button`
     background-color: var(--bgColor, var(--bg-black));
-    width: var(--width, 199px ); 
+    width: 147px; 
     height: var(--height, 64px);
     color: var(--white);
     font-weight: var(--extra-bold);
@@ -31,11 +31,20 @@ const Wrapper = styled.button`
     border: none;
     padding: 0;
     cursor: pointer;
+    text-transform: capitalize;
 
+    span {
+      text-transform: lowercase;
+    }
  
     &:hover {
-      background-color: var(--hover, --black-hover);
+      background-color: var(--hover, var(--black-hover));
 
+    }
+
+
+    @media ${QUERIES.laptopAndUp} {
+      width: var(--width, 199px ); 
     }
 
 

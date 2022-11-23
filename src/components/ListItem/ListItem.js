@@ -12,7 +12,6 @@ function ListItem({ itemNum, children }) {
       <ContentWrapper>
       {children}
       </ContentWrapper>
-     
     </Wrapper>
   );
 }

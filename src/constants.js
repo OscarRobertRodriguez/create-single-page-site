@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components/macro";
 
 const BREAKPOINTS = {
-  tabletMin: 550,
+  tabletMin: 768,
   laptopMin: 1100,
   desktopMin: 1440,
 };
@@ -43,6 +43,7 @@ html {
   --black-hover: hsla(240, 12%, 30%, 1);
     
   --font : 'Commissioner', sans-serif; 
+  --bold: 700;
   --extra-bold: 800; 
 }
 
