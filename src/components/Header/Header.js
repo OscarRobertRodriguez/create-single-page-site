@@ -3,14 +3,27 @@ import styled from "styled-components";
 import LogoImg from "../../assets/desktop/logo.svg";
 import HamburgerIcon from "../../assets/mobile/icon-hamburger.svg";
 import Button from "../Button/Button";
+import CrossIcon from "../../assets/mobile/icon-cross.svg";
 import { QUERIES } from "../../constants";
 
-function Header({ width, clientWidth }) {
+function Header({ width, open, setOpen }) {
   return (
     <Wrapper>
       <Logo src={LogoImg} alt="company logo - home" />
       {width < 768 ? (
-        <Hamburger src={HamburgerIcon} alt="Mobile Menu - click for site nav" />
+        open ? (
+          <Cross
+            src={CrossIcon}
+            alt="close nav"
+            onClick={() => setOpen((prev) => !prev)}
+          />
+        ) : (
+          <Hamburger
+            src={HamburgerIcon}
+            alt="Mobile Menu - click for site nav"
+            onClick={() => setOpen((prev) => !prev)}
+          />
+        )
       ) : (
         <TabletAndUpNavWrapper>
           <Nav>
@@ -39,7 +52,7 @@ const Wrapper = styled.header`
   position: fixed;
   margin: 0 -24px;
   width: 100%;
-  height: 178px;
+  height: 120px;
   background: var(--white);
   top: 0;
   justify-items: space-between;
@@ -48,8 +61,10 @@ const Wrapper = styled.header`
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  z-index: 99999;
 
   @media ${QUERIES.tabletAndUp} {
+    height: 178px;
     grid-template-columns: 0.7fr 1fr;
   }
 
@@ -64,6 +79,8 @@ const Hamburger = styled.img`
   padding-right: 24px;
   cursor: pointer;
 `;
+
+const Cross = styled(Hamburger)``;
 
 const Logo = styled.img`
   padding-left: 24px;

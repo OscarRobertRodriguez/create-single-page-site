@@ -10,7 +10,7 @@ function ListItem({ itemNum, children }) {
     <Wrapper>
       <ItemNum>{formatItemNumber(itemNum)}</ItemNum>
       <ContentWrapper>
-      {children}
+        {children}
       </ContentWrapper>
     </Wrapper>
   );
@@ -23,7 +23,7 @@ position: relative;
   list-style: none;
   width: 100%;
   height: 159px;
-  /* display: flex; */
+
 
   @media ${QUERIES.tabletAndUp} {
      width: 355px;
