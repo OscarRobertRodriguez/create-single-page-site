@@ -1,4 +1,4 @@
-import {useState} from 'react'; 
+import {useState, useEffect} from 'react'; 
 import GlobalStyles from "../../constants";
 import styled from "styled-components";
 import ListItem from "../ListItem/ListItem";
@@ -10,7 +10,17 @@ function App() {
   const {width} = useWindowDimensions();
   const [open, setOpen] =  useState(false); 
 
+
+  useEffect(() => {
+     
+    if (width >= 768 && open !== false) {
+      setOpen(prev => !prev)
+    }
   
+
+  }, [width, open])
+  
+
 
 
   return (
