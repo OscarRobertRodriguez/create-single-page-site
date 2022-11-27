@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { QUERIES } from "../../constants";
-import Modal, { Wrapper as ModalWrapper } from "../Modal";
+import { Wrapper as ModalWrapper } from "../Modal";
+import { Wrapper as HeroWrapper } from "../Hero";
 
 function Button({ children }) {
   return <Wrapper>{children}</Wrapper>;
@@ -32,7 +33,7 @@ const Wrapper = styled.button`
     width: 199px;
   }
 
-  ${ModalWrapper} & {
+  ${ModalWrapper} & , ${HeroWrapper} & {
     width: 199px;
     height: 64px;
     background: var(--red);
@@ -41,6 +42,17 @@ const Wrapper = styled.button`
 
     &:hover {
       background-color: var(--red-hover);
+    }
+  }
+
+  ${HeroWrapper} & {
+    margin-top: 25px;
+    font-size: var(--18px);
+    width: 177px;
+    height: 72px;
+
+    @media ${QUERIES.laptopAndUp} {
+      margin-top: 10px;
     }
   }
 `;

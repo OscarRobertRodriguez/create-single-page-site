@@ -29,9 +29,9 @@ export const Wrapper = styled.div`
   background: var(--bg-black);
   color: var(--white);
   position: absolute;
-  top: 120px;
+  top: 0px;
   right: 26px;
-  transform: ${(props) => (props.open ? `translateY(0)` : `translateY(-100%)`)};
+  transform: ${(props) => (props.open ? `translateY(41%)` : `translateY(-100%)`)};
   transition: 0.2s all;
   isolation: isolate;
   z-index: 9999;

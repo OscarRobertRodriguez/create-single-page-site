@@ -161,7 +161,7 @@ p {
     color: var(--text-black);
     
 
-    @media ${QUERIES.desktopAndUp} {
+    @media ${QUERIES.laptopAndUp} {
     font-size: var(--18px);
     line-height: 32px;
     }

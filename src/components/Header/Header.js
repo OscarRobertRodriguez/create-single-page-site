@@ -56,7 +56,7 @@ const Wrapper = styled.header`
   background: var(--white);
   top: 0;
   justify-items: space-between;
-  padding: 0 -24px;
+  padding : 0 24px;
   max-width: 1440px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -64,33 +64,40 @@ const Wrapper = styled.header`
   z-index: 99999;
 
   @media ${QUERIES.tabletAndUp} {
+    position: absolute;
     height: 178px;
     grid-template-columns: 0.7fr 1fr;
+    padding: 0;
+    margin: 0;
   }
 
   @media ${QUERIES.desktopAndUp} {
-    grid-template-columns: 1fr 0.97fr;
-    position: absolute;
+    grid-template-columns: 1fr .97fr;
   }
 `;
 
 const Hamburger = styled.img`
   justify-self: end;
-  padding-right: 24px;
+  /* padding-right: 24px; */
   cursor: pointer;
 `;
 
 const Cross = styled(Hamburger)``;
 
 const Logo = styled.img`
-  padding-left: 24px;
+  /* padding-left: 24px; */
 
   @media ${QUERIES.tabletAndUp} {
     padding-left: 40px;
-  }
+  }  
+  @media ${QUERIES.laptopAndUp} {
+   padding-left: 165px;
+}
+
+
 
   @media ${QUERIES.desktopAndUp} {
-    padding-left: 165px;
+    /* padding-left: 165px; */
   }
 `;
 

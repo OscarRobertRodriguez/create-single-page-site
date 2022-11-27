@@ -4,6 +4,8 @@ import styled from "styled-components";
 import ListItem from "../ListItem/ListItem";
 import Header from "../Header/Header";
 import Modal from '../Modal/Modal';
+import Hero from '../Hero/Hero';
+import { QUERIES } from '../../constants';
 import useWindowDimensions from "../../hooks/use-window-dimensions.hook";
 
 function App() {
@@ -26,13 +28,7 @@ function App() {
   return (
     <Wrapper>
       <Header width={width} setOpen={setOpen} open={open} />
-      <ListItem itemNum={1}>
-        <h4>Brand Strategy</h4>
-        <p>
-          Brand strategy is critical for long-term success. Outshining
-          competitors and capturing the target audience are key.
-        </p>
-      </ListItem>
+      <Hero width={width} />
       <Modal open={open}>modal</Modal>
       <GlobalStyles />
     </Wrapper>
@@ -47,9 +43,21 @@ position: relative;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  background-color: var(--red);
   padding: 0 24px;
-  padding-top: 178px;
+  padding-top: 120px;
+  overflow: hidden;
+
+
+  @media ${QUERIES.tabletAndUp} {
+    padding-top: 178px;
+    padding-left: 0;
+    padding-right: 40px;
+  }
+
+  @media ${QUERIES.desktopAndUp} {
+    padding-left: 0;
+    padding-right: 0;
+}
 `;
 
 
