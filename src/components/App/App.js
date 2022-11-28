@@ -5,6 +5,7 @@ import ListItem from "../ListItem/ListItem";
 import Header from "../Header/Header";
 import Modal from '../Modal/Modal';
 import Hero from '../Hero/Hero';
+import CallToAction from '../CallToAction/CallToAction';
 import { QUERIES } from '../../constants';
 import useWindowDimensions from "../../hooks/use-window-dimensions.hook";
 
@@ -29,6 +30,7 @@ function App() {
     <Wrapper>
       <Header width={width} setOpen={setOpen} open={open} />
       <Hero width={width} />
+      <CallToAction /> 
       <Modal open={open}>modal</Modal>
       <GlobalStyles />
     </Wrapper>

@@ -35,7 +35,7 @@ export const Wrapper = styled.div`
 @media ${QUERIES.tabletAndUp} {
    display: grid;
    grid-template-columns: 0.7fr .33fr .67fr;
-  height: 606px;
+  /* height: 606px; */
 }
 
 @media ${QUERIES.laptopAndUp} {
