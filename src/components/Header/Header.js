@@ -8,7 +8,7 @@ import { QUERIES } from "../../constants";
 
 function Header({ width, open, setOpen }) {
   return (
-    <Wrapper>
+    <Wrapper className="full-bleed">
       <Logo src={LogoImg} alt="company logo - home" />
       {width < 768 ? (
         open ? (
@@ -49,75 +49,47 @@ function Header({ width, open, setOpen }) {
 export default Header;
 
 const Wrapper = styled.header`
-  position: fixed;
-  margin: 0 -24px;
-  width: 100%;
   height: 120px;
   background: var(--white);
   top: 0;
   justify-items: space-between;
-  padding : 0 24px;
   max-width: 1440px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   z-index: 99999;
+  width: 100%;
 
   @media ${QUERIES.tabletAndUp} {
-    position: absolute;
     height: 178px;
-    grid-template-columns: 0.7fr 1fr;
-    padding: 0;
-    margin: 0;
+    grid-template-columns: 0.43fr 0.57fr;
   }
 
   @media ${QUERIES.desktopAndUp} {
-    grid-template-columns: 1fr .97fr;
+    grid-template-columns: 1fr 0.97fr;
   }
 `;
 
 const Hamburger = styled.img`
   justify-self: end;
-  /* padding-right: 24px; */
   cursor: pointer;
 `;
 
 const Cross = styled(Hamburger)``;
 
 const Logo = styled.img`
-  /* padding-left: 24px; */
-
   @media ${QUERIES.tabletAndUp} {
-    padding-left: 40px;
-  }  
-  @media ${QUERIES.laptopAndUp} {
-   padding-left: 165px;
-}
-
-
-
-  @media ${QUERIES.desktopAndUp} {
-    /* padding-left: 165px; */
+    padding-left: var(--indoor-breathing-room);
   }
 `;
 
 const TabletAndUpNavWrapper = styled.div`
   background: var(--red);
-
   align-self: initial;
   grid-column: 2/-1;
   height: 100%;
-  padding-right: 165px;
   display: flex;
-
-  padding-right: 24px;
-
-  @media ${QUERIES.tabletAndUp} {
-    padding-right: 40px;
-  }
-  @media ${QUERIES.desktopAndUp} {
-    padding-right: 165px;
-  }
+  padding-right: var(--indoor-breathing-room);
 `;
 
 const Nav = styled.nav`
@@ -129,7 +101,7 @@ const Nav = styled.nav`
   max-width: 600px;
 
   @media ${QUERIES.laptopAndUp} {
-    padding-left: 70px;
+    padding-left: 40px;
   }
 
   a {

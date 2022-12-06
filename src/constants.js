@@ -15,6 +15,8 @@ const GlobalStyles = createGlobalStyle`
 
 
 
+
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -45,6 +47,21 @@ html {
   --font : 'Commissioner', sans-serif; 
   --bold: 700;
   --extra-bold: 800; 
+  --breathing-room: 24px;
+  --indoor-breathing-room: 24px; 
+  
+
+
+  @media ${QUERIES.tabletAndUp} {
+   --breathing-room: 0px;
+   --indoor-breathing-room: 40px;
+}
+
+@media ${QUERIES.laptopAndUp} {
+   --breathing-room: 0px;
+   --indoor-breathing-room: 165px; 
+   --indoor-right-desktop-breathing-room: 106px; 
+}
 }
 
 
@@ -70,8 +87,17 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: var(--font);
-
+  
 }
+
+.full-bleed.full-bleed  {
+  grid-column: 1 / -1;
+  margin-left: calc(var(--breathing-room) * -1); 
+  margin-right: calc(var(--breathing-room) * -1); 
+  justify-self: center;
+}
+
+
 /*
   6. Improve media defaults
 */
@@ -115,7 +141,7 @@ h1 {
         line-height: var(--56px);
     }
 
-   @media ${QUERIES.desktopAndUp} {
+   @media ${QUERIES.laptopAndUp} {
     font-size:  var(--88px) ;
     line-height: 88px;
    }   

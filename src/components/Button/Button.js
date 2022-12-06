@@ -50,6 +50,10 @@ const Wrapper = styled.button`
     font-size: var(--18px);
     width: 177px;
     height: 72px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
 
     @media ${QUERIES.laptopAndUp} {
       margin-top: 10px;
