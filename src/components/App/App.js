@@ -6,7 +6,7 @@ import Header from "../Header/Header";
 import Modal from '../Modal/Modal';
 import Hero from '../Hero/Hero';
 import { QUERIES } from '../../constants';
-import mobileImg from "../../assets/mobile/image-hero.jpg";
+import StrategyCard from '../StrategyCard/StrategyCard';
 import useWindowDimensions from "../../hooks/use-window-dimensions.hook";
 import List from '../List';
 
