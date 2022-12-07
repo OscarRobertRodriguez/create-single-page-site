@@ -8,6 +8,7 @@ import Hero from '../Hero/Hero';
 import { QUERIES } from '../../constants';
 import mobileImg from "../../assets/mobile/image-hero.jpg";
 import useWindowDimensions from "../../hooks/use-window-dimensions.hook";
+import List from '../List';
 
 function App() {
   const {width} = useWindowDimensions();
@@ -30,8 +31,12 @@ function App() {
     <Wrapper>
       <Header width={width} setOpen={setOpen} open={open} />
       <Hero  width={width} />
+      <StrategicSection>
+      <List  />
+      </StrategicSection>
+
       <Modal open={open}>modal</Modal>
-    
+     
       <GlobalStyles />
     </Wrapper>
   );
@@ -47,27 +52,9 @@ const Wrapper = styled.div`
   min-height: 100%;
   padding-left: var(--breathing-room);
   padding-right: var(--breathing-room); 
+  width:100%;
 
 
-
-
-
-  /* width: 100%; */
-  /* max-width: 1440px; */
-  /* margin: 0 auto; */
-  /* padding: 0 24px; */
-  /* padding-top: 120px; */
-  /* overflow: hidden; */
-
-
-
-
-
-   /* & .full-bleed {
-     grid-column: 1 / -1;
-     margin-left: calc(var(--breathing-room) * -1); 
-  margin-right: calc(var(--breathing-room) * -1); 
-   } */
 
 
 
@@ -90,3 +77,8 @@ const Wrapper = styled.div`
 `;
 
 
+
+const StrategicSection = styled.section`
+  background-color: blue;
+
+`;

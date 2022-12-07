@@ -53,7 +53,6 @@ const Wrapper = styled.header`
   background: var(--white);
   top: 0;
   justify-items: space-between;
-  max-width: 1440px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
