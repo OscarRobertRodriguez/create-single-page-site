@@ -5,12 +5,13 @@ import { QUERIES } from "../../constants";
 
 
 
-function ListItem({ itemNum, children }) {
+function ListItem({ itemNum, title, content}) {
   return (
     <Wrapper>
       <ItemNum>{formatItemNumber(itemNum)}</ItemNum>
       <ContentWrapper>
-        {children}
+        <h4>{title}</h4>
+        <p>{content}</p>
       </ContentWrapper>
     </Wrapper>
   );
@@ -33,6 +34,7 @@ position: relative;
     @media ${QUERIES.desktopAndUp} {
       width: 504px;
       height: 196px;
+     
     }
 
 `;
@@ -57,7 +59,7 @@ const ContentWrapper = styled.div`
 
 
     @media ${QUERIES.tabletAndUp} {
-     max-width: 339px;
+     max-width: 355px;
 
     }
 

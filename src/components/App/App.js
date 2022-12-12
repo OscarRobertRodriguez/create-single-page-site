@@ -32,9 +32,10 @@ function App() {
       <Header width={width} setOpen={setOpen} open={open} />
       <Hero  width={width} />
       <StrategicSection>
-      <List  />
+        <StrategyCard  width={width}/>
+      <List width={width}  />
       </StrategicSection>
-
+      
       <Modal open={open}>modal</Modal>
      
       <GlobalStyles />
@@ -79,6 +80,14 @@ const Wrapper = styled.div`
 
 
 const StrategicSection = styled.section`
-  background-color: blue;
+  /* background-color: blue; */
+
+  @media ${QUERIES.tabletAndUp} {
+
+   display: grid;
+   grid-template-columns: 1fr 50px 1.2fr;
+   grid-template-rows: 1fr 120px min-content;
+   position: relative;
+}
 
 `;
