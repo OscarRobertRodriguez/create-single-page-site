@@ -43,6 +43,7 @@ export default Hero;
 export const Wrapper = styled.div`
   width: 100%;
 
+
   @media ${QUERIES.tabletAndUp} {
     display: grid;
     grid-template-columns: 0.43fr .57fr;
@@ -50,6 +51,7 @@ export const Wrapper = styled.div`
   }
 
   @media ${QUERIES.laptopAndUp} {
+    height: 100%;
   }
 
   @media ${QUERIES.desktopAndUp} {

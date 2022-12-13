@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { QUERIES } from "../../constants";
 import { Wrapper as ModalWrapper } from "../Modal";
 import { Wrapper as HeroWrapper } from "../Hero";
+import {Wrapper as FooterWrapper} from '../footer'; 
 
 function Button({ children }) {
   return <Wrapper>{children}</Wrapper>;
@@ -33,7 +34,7 @@ const Wrapper = styled.button`
     width: 199px;
   }
 
-  ${ModalWrapper} & , ${HeroWrapper} & {
+  ${ModalWrapper} & , ${HeroWrapper} & , ${FooterWrapper} & {
     width: 199px;
     height: 64px;
     background: var(--red);

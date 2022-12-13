@@ -9,6 +9,7 @@ import { QUERIES } from '../../constants';
 import StrategyCard from '../StrategyCard/StrategyCard';
 import useWindowDimensions from "../../hooks/use-window-dimensions.hook";
 import List from '../List';
+import Footer from '../footer/footer';
 
 function App() {
   const {width} = useWindowDimensions();
@@ -35,7 +36,7 @@ function App() {
         <StrategyCard  width={width}/>
       <List width={width}  />
       </StrategicSection>
-      
+      <Footer />
       <Modal open={open}>modal</Modal>
      
       <GlobalStyles />
@@ -54,6 +55,7 @@ const Wrapper = styled.div`
   padding-left: var(--breathing-room);
   padding-right: var(--breathing-room); 
   width:100%;
+  overflow: hidden;
 
 
 
@@ -73,7 +75,6 @@ const Wrapper = styled.div`
 
 & > *  {
        grid-column: 2;
-
    }
 `;
 
