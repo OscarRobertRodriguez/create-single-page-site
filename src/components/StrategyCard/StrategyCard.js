@@ -49,6 +49,11 @@ const Wrapper = styled.div`
    grid-row: 1/3;
 }
 
+
+@media ${QUERIES.desktopAndUp} {
+ grid-template-columns: 1fr 150px 1.2fr;
+}
+
 `;
 
 const ImgWrapper = styled.div`
@@ -83,13 +88,11 @@ const ContentWrapper = styled.div`
   @media ${QUERIES.tabletAndUp} {
   grid-column: 3;
   height: 100%;
-
-}
-
-  @media ${QUERIES.desktopAndUp} {
-   display: grid;
+  display: grid;
    align-content: center;
+
 }
+
 
   h2 {
     color: var(--white);

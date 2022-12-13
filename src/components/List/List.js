@@ -42,7 +42,7 @@ function List({width}) {
 export default List;
 
 const Wrapper = styled.div`
-  height: 797px;
+  height: 918px;
   background-color: var(--red);
   padding-left: var(--indoor-breathing-room);
   padding-right: var(--indoor-breathing-room);
@@ -50,6 +50,7 @@ const Wrapper = styled.div`
   padding-bottom: 96px;
 
   @media ${QUERIES.tabletAndUp} {
+    height: 797px;
   grid-column: 2/-1;
   grid-row: 2/4;
   padding-top: 120px;
