@@ -1,15 +1,15 @@
 import {useState, useEffect} from 'react'; 
 import GlobalStyles from "../../constants";
 import styled from "styled-components";
-import ListItem from "../ListItem/ListItem";
-import Header from "../Header/Header";
-import Modal from '../Modal/Modal';
-import Hero from '../Hero/Hero';
+import Header from "../Header";
+import Modal from '../Modal';
+import Hero from '../Hero';
 import { QUERIES } from '../../constants';
-import StrategyCard from '../StrategyCard/StrategyCard';
+import StrategyCard from '../StrategyCard';
 import useWindowDimensions from "../../hooks/use-window-dimensions.hook";
 import List from '../List';
-import Footer from '../footer/footer';
+import Footer from '../footer';
+import Slider from '../Slider';
 
 function App() {
   const {width} = useWindowDimensions();
@@ -36,6 +36,11 @@ function App() {
         <StrategyCard  width={width}/>
       <List width={width}  />
       </StrategicSection>
+
+      <div>
+      <Slider width={width} />
+      </div>
+     
       <Footer />
       <Modal open={open}>modal</Modal>
      
@@ -62,9 +67,6 @@ const Wrapper = styled.div`
 
 
   @media ${QUERIES.tabletAndUp} {
-    /* padding-top: 178px; */
-    /* padding-left: 0; */
-    /* padding-right: 40px; */
     padding-right: 0;
   }
 
@@ -81,7 +83,6 @@ const Wrapper = styled.div`
 
 
 const StrategicSection = styled.section`
-  /* background-color: blue; */
 
   @media ${QUERIES.tabletAndUp} {
 

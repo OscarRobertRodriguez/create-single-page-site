@@ -32,7 +32,7 @@ function List({width}) {
       <ListItemsWrapper>
      {
       data.map(({item, title, content}) => 
-         <ListItem  itemNum={item} title={title} content={content}/ >
+         <ListItem key={item} itemNum={item} title={title} content={content}/ >
      )}
      </ListItemsWrapper>
     </Wrapper>
@@ -79,6 +79,14 @@ const Wrapper = styled.div`
     position: absolute;
     bottom: 28%;
     left: 40px;
+}
+
+
+@media ${QUERIES.laptopAndUp} {
+  bottom: 24%;
+  left: 180px;
+ 
+
 }
 
 @media ${QUERIES.desktopAndUp} {
