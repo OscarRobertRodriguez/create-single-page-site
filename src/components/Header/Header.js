@@ -59,9 +59,11 @@ const Wrapper = styled.header`
   z-index: 99999;
   width: 100%;
 
+
   @media ${QUERIES.tabletAndUp} {
     height: 178px;
     grid-template-columns: 0.43fr 0.57fr;
+
   }
 
   @media ${QUERIES.desktopAndUp} {

@@ -5,6 +5,7 @@ import slide1 from "../../assets/mobile/image-slide-1.jpg";
 import slide2 from "../../assets/mobile/image-slide-2.jpg";
 import slide3 from "../../assets/mobile/image-slide-3.jpg";
 import decorImg from "../../assets/desktop/bg-pattern-wavy-white.svg";
+import ControlButton from "../ControlButton/ControlButton";
 import nextIcon from "../../assets/desktop/icon-arrow-next.svg";
 import previousIcon from "../../assets/desktop/icon-arrow-previous.svg";
 import Overlay from "../Overlay/Overlay";
@@ -21,6 +22,8 @@ import desktopImg3 from "../../assets/desktop/image-slide-3.jpg";
 const slideCarousel = (e) => {
   const button = e.currentTarget;
   const buttonValue = button.getAttribute("data-carousel-button");
+
+  console.log(buttonValue);
 
 
   const offset = buttonValue === "next" ? 1 : -1;
@@ -93,20 +96,10 @@ function Slider({ width }) {
 
         <ControlsWrapper>
           <Controls className="activeControls" data-pos="1">
-            <label
-              htmlFor="3"
-              data-carousel-button="prev"
-              onClick={slideCarousel}
-            >
-              <img src={previousIcon} alt="previous slide" />
-            </label>
-            <label
-              htmlFor="2"
-              data-carousel-button="next"
-              onClick={(e) => slideCarousel(e)}
-            >
-              <img src={nextIcon} alt="next slide" />
-            </label>
+
+            <ControlButton control={'prev'} onClick={slideCarousel} />
+            <ControlButton control={'next'}  onClick={slideCarousel} />
+
           </Controls>
         </ControlsWrapper>
       </ContentWrapper>
@@ -211,16 +204,7 @@ const Pane = styled.li`
   @media ${QUERIES.desktopAndUp} {
     height: 728px;
 
-    /* :before {
-      content: " ";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.2);
-    } */
+
   }
 
   img {
