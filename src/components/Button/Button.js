@@ -44,6 +44,8 @@ const Wrapper = styled.button`
     &:hover {
       background-color: var(--red-hover);
     }
+
+ 
   }
 
   ${HeroWrapper} & {

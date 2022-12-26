@@ -4,11 +4,16 @@ import LogoImg from "../../assets/desktop/logo.svg";
 import HamburgerIcon from "../../assets/mobile/icon-hamburger.svg";
 import Button from "../Button/Button";
 import CrossIcon from "../../assets/mobile/icon-cross.svg";
+import Modal from "../Modal";
 import { QUERIES } from "../../constants";
 
 function Header({ width, open, setOpen }) {
   return (
     <Wrapper className="full-bleed">
+ 
+        
+
+    
       <Logo src={LogoImg} alt="company logo - home" />
       {width < 768 ? (
         open ? (
@@ -42,6 +47,7 @@ function Header({ width, open, setOpen }) {
           </Nav>
         </TabletAndUpNavWrapper>
       )}
+   
     </Wrapper>
   );
 }
@@ -58,11 +64,16 @@ const Wrapper = styled.header`
   align-items: center;
   z-index: 99999;
   width: 100%;
+  padding-left: var(--breathing-room);
+  padding-right: var(--breathing-room);
+  isolation: isolate;
+  position: fixed;
 
 
   @media ${QUERIES.tabletAndUp} {
     height: 178px;
     grid-template-columns: 0.43fr 0.57fr;
+    position: static;
 
   }
 

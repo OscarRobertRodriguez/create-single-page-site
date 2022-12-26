@@ -42,12 +42,14 @@ export default Hero;
 
 export const Wrapper = styled.div`
   width: 100%;
+  padding-top: 121px;
 
 
   @media ${QUERIES.tabletAndUp} {
     display: grid;
     grid-template-columns: 0.43fr .57fr;
     height: 606px;
+    padding-top: initial;
   }
 
   @media ${QUERIES.laptopAndUp} {

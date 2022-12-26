@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
   height: 292px;
   background: var(--bg-black);
   color: var(--white);
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 26px;
   transform: ${(props) => (props.open ? `translateY(41%)` : `translateY(-100%)`)};

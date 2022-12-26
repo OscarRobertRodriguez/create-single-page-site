@@ -32,6 +32,10 @@ export const Wrapper = styled.div`
     color: var(--red-hover);
   }
 
+  &:hover span {
+      color: var(--red-hover);
+    }
+
   span {
     text-transform: lowercase;
   }
