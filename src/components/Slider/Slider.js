@@ -1,13 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { QUERIES } from "../../constants";
-import slide1 from "../../assets/mobile/image-slide-1.jpg";
-import slide2 from "../../assets/mobile/image-slide-2.jpg";
-import slide3 from "../../assets/mobile/image-slide-3.jpg";
 import decorImg from "../../assets/desktop/bg-pattern-wavy-white.svg";
 import ControlButton from "../ControlButton/ControlButton";
-import nextIcon from "../../assets/desktop/icon-arrow-next.svg";
-import previousIcon from "../../assets/desktop/icon-arrow-previous.svg";
 import Overlay from "../Overlay/Overlay";
 import mobileImg1 from "../../assets/mobile/image-slide-1.jpg";
 import tabletImg1 from "../../assets/tablet/image-slide-1.jpg";

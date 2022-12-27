@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { QUERIES } from "../../constants";
 
 function UnderlineButton({ children }) {
   return (

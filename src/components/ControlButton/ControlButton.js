@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { QUERIES } from "../../constants";
+
 
 function ControlButton({ control, onClick}, props ) {
   return (

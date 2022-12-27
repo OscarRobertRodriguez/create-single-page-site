@@ -4,7 +4,6 @@ import LogoImg from "../../assets/desktop/logo.svg";
 import HamburgerIcon from "../../assets/mobile/icon-hamburger.svg";
 import Button from "../Button/Button";
 import CrossIcon from "../../assets/mobile/icon-cross.svg";
-import Modal from "../Modal";
 import { QUERIES } from "../../constants";
 
 function Header({ width, open, setOpen }) {
